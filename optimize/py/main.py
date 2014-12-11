@@ -86,8 +86,8 @@ def calc_derivative_values(func, options):
 
 
 def curve_fit(func, options):
-    xdata = options['xData']
-    ydata = options['yData']
+    xdata = np.array(options['xData'])
+    ydata = np.array(options['yData'])
     try:
         (popt, pcov) = o.curve_fit(f=func, xdata=xdata, ydata=ydata)
         return {
